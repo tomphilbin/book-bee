@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "scripts": {
+    "dev:web": "yarn --cwd apps/web dev",
+    "dev:ios": "yarn --cwd apps/native react-native run-ios",
+    "build": "yarn --cwd apps/web build",
+    "start": "yarn --cwd apps/web start"
+  }
+}
